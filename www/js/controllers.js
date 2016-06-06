@@ -31,6 +31,9 @@ angular.module('starter.controllers', [])
         if(res.code == 'ECONNREFUSED'){
           $scope.noticeMessage = 'Connection to mBaaS refused';
           $scope.processName = null;
+        }else if(res == 'Unauthorized'){
+          $scope.noticeMessage = 'Authentication Error';
+          $scope.processName = null;
         }else if(res.error != null){
           $scope.noticeMessage = 'Connection to BPM refused'
           $scope.processName = null;
@@ -90,6 +93,11 @@ angular.module('starter.controllers', [])
         }, function(res) {
           if(res.code == 'ECONNREFUSED'){
             $scope.noticeMessage = 'Connection to mBaaS refused';
+            $scope.processName = null;
+            // Clear loading
+            $scope.hide();
+          }else if(res == 'Unauthorized'){
+            $scope.noticeMessage = 'Authentication Error';
             $scope.processName = null;
             // Clear loading
             $scope.hide();

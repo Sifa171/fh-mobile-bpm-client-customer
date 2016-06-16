@@ -1,0 +1,8 @@
+node_modules
+*~
+cov-*
+coverage
+plato
+.idea
+npm-debug.log
+platforms

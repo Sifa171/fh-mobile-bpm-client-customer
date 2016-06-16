@@ -1,0 +1,37 @@
+<ion-view title="Details">
+  <ion-content class="padding">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="getProcessContent()">
+    </ion-refresher>
+    <div class="list" ng-show="noticeMessage">
+      <span class="item noticeMessage" >
+        <p class="noticeMessage"><b>{{noticeMessage}}</b></p>
+      </span>
+    </div>
+      <div class="list list-inset" ng-show="processContentList" data-ng-init="getProcessContent()">
+        <h4>Your request</h4>
+        <div class="row">
+          <div class="col item myContentColumn"><b>First Name:</b></div>
+          <div class="col item myContentColumn">{{firstname}}</div>
+        </div>
+        <div class="row">
+          <div class="col item myContentColumn"><b>Last Name:</b></div>
+          <div class="col item myContentColumn">{{lastname}}</div>
+        </div>
+        <div class="row">
+          <div class="col item myContentColumn"><b>Request:</b></div>
+          <div class="col item myContentColumn">{{request}}</div>
+        </div>
+        <h4>Progress</h4>
+        <div class="row">
+          <div class="col item myContentColumn"><b>Decision:</b></div>
+          <div class="col item myContentColumn">{{decision}}</div>
+        </div>
+        <div class="row">
+          <div class="col item myContentColumn"><b>Comment:</b></div>
+          <div class="col item myContentColumn">{{comment}}</div>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

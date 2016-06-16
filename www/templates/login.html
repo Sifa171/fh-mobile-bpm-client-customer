@@ -1,0 +1,26 @@
+<ion-view view-title="Login" name="login" class="loginPage">
+  <ion-content class="padding">
+    <div class="row">
+      <img src="img/redhatlogo.png" class="loginLogo">
+    </div>
+    <div class="row responsive-sm loginPanel">
+      <div class="col">
+        <div class="list list-inset">
+          <p class="loginHeader"><b>Login</b></p>
+          <label class="item item-input ion-person loginLabel">
+            <input ng-model="credentials.username" type="text" placeholder="Username" class="loginInput">
+          </label>
+          <label class="item item-input ion-key loginLabel">
+            <input ng-model="credentials.password" type="password" placeholder="Password" class="loginInput">
+          </label>
+          <button type="button" class="button button-block button-balanced button-release loginButton" ng-click="closeLogin()">
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+<div class="bar bar-footer">
+  <div class="title loginFooter">By @faulhaber_IT and @Sifa171</div>
+</div>

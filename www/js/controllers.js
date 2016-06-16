@@ -159,7 +159,7 @@ angular.module('starter.controllers', [])
         }
       }, function(msg,err) {
         $scope.processName = null;
-        $scope.noticeMessage = "$fh.cloud failed. Error: " + JSON.stringify(err.message);
+        $scope.noticeMessage = "$fh.cloud failed. Error: " + JSON.stringify(err);
       });
       // Stop the ion-refresher from spinning
       $scope.$broadcast('scroll.refreshComplete');

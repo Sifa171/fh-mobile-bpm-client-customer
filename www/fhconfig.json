@@ -3,5 +3,10 @@
   "appkey": "f3e6c8f90f278f4e3ba52156cf36e5624f4481d8",
   "connectiontag": "0.0.15",
   "host": "https://sa-jboss-dach.redhat.feedhenry.com",
-  "projectid": "cn4wjytjvbpp36i54bsr4ttf"
+  "projectid": "cn4wjytjvbpp36i54bsr4ttf",
+  // RHMAP PUSH CONFIGURATION
+  "ios": {
+    "variantID": "218aadb2-25e0-411a-bcb1-71a9521e20d5",
+    "variantSecret": "97af76e4-04dd-490b-9c93-611241f34a29"
+  }
 }

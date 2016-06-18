@@ -63,7 +63,7 @@ var app = {
 
       // Add nothing here message
       var el = document.createElement("a");
-      el.innerHTML = '<p>No messages.</p>';
+      el.innerHTML = '<p>No status updates have been received yet.</p>';
       el.setAttribute('id', 'nomessages');
       el.setAttribute('class', 'item');
       el.setAttribute('href', '#');

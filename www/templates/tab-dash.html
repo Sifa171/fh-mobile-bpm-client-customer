@@ -17,8 +17,16 @@
       <h2 class="myBrand">BPM Connector - Customer</h2>
     </div>
     <div class="informationDash" data-ng-init="getProcess()">
-      <h4>Messages</h4>
+      <h4>My information stream</h4>
       <div class="list">
+
+        <div id="messages" class="list">
+          <span id="nomessages" class="item">
+            No status updates have been received yet.
+          </span>
+        </div>
+        
+        <h4>My settings</h4>
         <a id="waiting" class="item" href="#">
           <ion-spinner class="spinner-assertive"></ion-spinner>
           <p style="display: inline;">Registering for push notifications</p>
@@ -31,6 +39,7 @@
           <h2><i class="icon ion-alert-circled"></i>&nbsp;Error while enabling push</h2>
           <p id="pushregistererror-msg">ERROR</p>
         </a>
+
         <span class="item" ng-show="processName">
           <p>Currently interacting with the following Process:</p>
           <p><b>{{processName}}</b></p>

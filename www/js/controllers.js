@@ -79,6 +79,10 @@ angular.module('starter.controllers', [])
   // Called when the form is submitted
   $scope.createCase = function(){
     $scope.show();
+    // Prefill with login data
+    $scope.case.firstname = $scope.credentials.username.split('.')[0];
+    $scope.case.lastname = $scope.credentials.username.split('.')[1];
+
     // check if userInput is defined
     if ($scope.case.firstname && $scope.case.lastname && $scope.case.request) {
       $fh.cloud({

@@ -22,7 +22,7 @@
           <input ng-model="case.lastname" type="text" placeholder="Last Name" ng-value="credentials.username.split('.')[1]" ng-readonly="1"></input>
         </label>
         <label class="item item-input">
-          <textarea ng-model="case.request" type="text" placeholder="Request"></textarea>
+          <textarea ng-model="case.request" type="text" placeholder="Request" style="height: 100px;"></textarea>
         </label>
         <button type="button" class="button button-block button-stable" ng-click="createCase()">
           Create

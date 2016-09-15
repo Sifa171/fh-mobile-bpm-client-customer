@@ -16,13 +16,13 @@
       <div class="list list-inset">
         <h4>Your request</h4>
         <label class="item item-input">
-          <input ng-model="case.firstname" type="text" placeholder="First Name"></input>
+          <input ng-model="case.firstname" type="text" placeholder="First Name" ng-value="credentials.username.split('.')[0]" ng-readonly="1"></input>
         </label>
         <label class="item item-input">
-          <input ng-model="case.lastname" type="text" placeholder="Last Name"></input>
+          <input ng-model="case.lastname" type="text" placeholder="Last Name" ng-value="credentials.username.split('.')[1]" ng-readonly="1"></input>
         </label>
         <label class="item item-input">
-          <input ng-model="case.request" type="text" placeholder="Request"></input>
+          <textarea ng-model="case.request" type="text" placeholder="Request"></textarea>
         </label>
         <button type="button" class="button button-block button-stable" ng-click="createCase()">
           Create

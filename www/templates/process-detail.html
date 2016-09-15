@@ -9,29 +9,35 @@
         <p class="noticeMessage"><b>{{noticeMessage}}</b></p>
       </span>
     </div>
-      <div class="list list-inset" ng-show="processContentList" data-ng-init="getProcessContent()">
-        <h4>Your request</h4>
-        <div class="row">
-          <div class="col item myContentColumn"><b>First Name:</b></div>
-          <div class="col item myContentColumn">{{firstname}}</div>
+
+    <div ng-show="processContentList" data-ng-init="getProcessContent()">
+
+      <div class="card">
+        <div class="item item-divider item-icon-left">
+          <i class="icon ion-chatbox"></i>
+          <h2>{{firstname}} {{lastname}}</h2>
+          <p>{{date | date:'dd.MM.yyyy'}}</p>
         </div>
-        <div class="row">
-          <div class="col item myContentColumn"><b>Last Name:</b></div>
-          <div class="col item myContentColumn">{{lastname}}</div>
+
+        <div class="item item-text-wrap">
+          {{request}}
         </div>
-        <div class="row">
-          <div class="col item myContentColumn"><b>Request:</b></div>
-          <div class="col item myContentColumn">{{request}}</div>
+      </div>
+
+      <div class="card">
+        <div class="item item-avatar">
+          <img src="img/women.jpg">
+          <h2>Sabine Sachbearbeiter</h2>
+          <p>{{date | date:'dd.MM.yyyy'}}</p>
         </div>
-        <h4>Progress</h4>
-        <div class="row">
-          <div class="col item myContentColumn"><b>Decision:</b></div>
-          <div class="col item myContentColumn">{{decision}}</div>
+        <div class="item item-text-wrap">
+          Status: {{decision}}
         </div>
-        <div class="row">
-          <div class="col item myContentColumn"><b>Comment:</b></div>
-          <div class="col item myContentColumn">{{comment}}</div>
+        <div class="item item-text-wrap">
+          {{comment}}
         </div>
+      </div>
     </div>
+
   </ion-content>
 </ion-view>

@@ -2,6 +2,8 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $ionicLoading, $ionicSideMenuDelegate, $ionicModal, $timeout) {
 
+  $scope.date = new Date();
+
   $scope.credentials = function(){
   };
 

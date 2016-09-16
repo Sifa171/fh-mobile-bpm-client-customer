@@ -186,6 +186,7 @@
 .informationDash{
   float: left;
   width: 100%;
+  margin-top: 10px;
 }
 
 .menuListItem{
@@ -228,4 +229,17 @@
 
 .loginFooter{
   font-size: small !IMPORTANT;
+}
+
+.dashHeader {
+    margin: -10px -10px -15px -10px;
+    position: relative;
+}
+
+.dashHeader img {
+  width: 100%;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #444; 
 }

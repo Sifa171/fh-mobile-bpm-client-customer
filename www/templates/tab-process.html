@@ -22,7 +22,7 @@
           </div>
           <div class="taskListItem">
           <h2>State</h2>
-            <p ng-style="processInstance['process-instance']['state'] == 'Active' && {'color':'green'}">{{processInstance['process-instance']['state']}}</p>
+            <p ng-style="processInstance['process-instance']['state'] == 'Active' && {'color':'green'}">{{processInstance['process-instance']['state'].replace('Completed', 'Done')}}</p>
           </div>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>

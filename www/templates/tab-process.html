@@ -10,21 +10,22 @@
       </span>
     </div>
     <ion-list ng-show="processInstances">
-                <ion-item class="item item-icon-right" ng-repeat="processInstance in processInstances" href="#/tab/process/{{processInstance['process-instance']['id']}}">
-                  <div class="taskListItem">
-                    <h2>Process Name</h2>
-                    <p>{{processInstance['process-instance']['process-id']}}</p>
-                    <h2>Agent</h2>
-                    <p>Placeholder</p>
-                  </div>
-                  <div>
-                    <h2>Status</h2>
-                    <p>{{processInstance['process-instance']['state']}}</p>
-                    <h2>ID</h2>
-                    <p>{{processInstance['process-instance']['id']}}</p>
-                  </div>
-                  <i class="icon ion-chevron-right icon-accessory"></i>
-                </ion-item>
-              </ion-list>
+        <ion-item class="item item-icon-left item-icon-right" ng-repeat="processInstance in processInstances" href="#/tab/process/{{processInstance['process-instance']['id']}}">
+          <i class="icon ion-chatbubble-working"></i>
+          <div class="taskListItem" style="width: 45px;">
+            <h2>ID</h2>
+            <p>VG0{{processInstance['process-instance']['id']}}</p>
+          </div>
+          <div class="taskListItem" style="width: 143px;">
+            <h2>Agent</h2>
+            <p>Sabine Sachbearbeiter</p>
+          </div>
+          <div class="taskListItem">
+          <h2>State</h2>
+            <p ng-style="processInstance['process-instance']['state'] == 'Active' && {'color':'green'}">{{processInstance['process-instance']['state']}}</p>
+          </div>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

@@ -125,10 +125,7 @@ angular.module('starter.controllers', [])
           $scope.hide();
         }else{
           $scope.noticeMessage = null;
-          // Clear form values
-          $scope.case.firstname = '';
-          $scope.case.lastname = '';
-          $scope.case.request = '';
+
           // Clear loading
           $scope.hide();
           $scope.modal.hide();

@@ -9,6 +9,10 @@ angular.module('starter.controllers', [])
 
   $scope.closeLogin = function () {
     if($scope.credentials.password && $scope.credentials.username){
+
+      $scope.case.firstname = $scope.credentials.username.split('.')[0];
+      $scope.case.lastname = $scope.credentials.username.split('.')[1];
+
       $scope.showSucces();
       // store the credentials to the mobile device
       window.localStorage.setItem("customer_bpm_username", $scope.credentials.username);

@@ -13,13 +13,14 @@
   }
   </style>
     <div data-ng-init="login.show()">
-      <!--<img src="/img/security_umbrellas_iphone6s_optimized.jpeg" class="dashHeader">
-      <h2 class="myBrand">My Insruance Portal</h2>-->
       <div class="dashHeader">
-        <img src="/img/security_umbrellas_iphone6s_optimized.jpeg">
+        <img src="/img/security_umbrellas_iphone6s_optimized.png">
       </div>
-      <h2>MyInsurance App</h2>
-      <span>Jelly-o croissant toffee dessert sesame snaps. Cake liquorice gingerbread cupcake topping macaroon cotton candy. Gingerbread ice cream carrot cake jujubes biscuit apple pie halvah muffin.</span>
+      <div class="informationDash" style="text-align: justify">
+        <h3>Welcome Hans Muster,</h3>
+        <span>this is your central hub to get in touch with <strong>MyInsurance</strong>.</span>
+        <span>Our mission is to help customers live their lives with more peace of mind.</span>
+      </div>
     </div>
     <div class="informationDash" data-ng-init="getProcess()">
       <h4>My information stream</h4>
@@ -31,7 +32,7 @@
           </span>
         </div>
         
-        <h4>My settings</h4>
+        <!--<h4>My settings</h4>
         <a id="waiting" class="item" href="#">
           <ion-spinner class="spinner-assertive"></ion-spinner>
           <p style="display: inline;">Registering for push notifications</p>
@@ -51,7 +52,7 @@
         </span>
         <span class="item noticeMessage" ng-show="noticeMessage">
           <p class="noticeMessage"><b>{{noticeMessage}}</b></p>
-        </span>
+        </span>-->
       </div>
     </div>
   </ion-content>

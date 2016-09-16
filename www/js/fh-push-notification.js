@@ -47,12 +47,31 @@ var app = {
    },
    addMessage: function (from, message) {
      document.getElementById('nomessages').style.display = 'none';
+      
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+
+      var yyyy = today.getFullYear();
+      if(dd<10){
+        dd='0'+dd
+      } 
+      if(mm<10){
+          mm='0'+mm
+      } 
+      var date = dd+'.'+mm+'.'+yyyy;
+      
       var messages = document.getElementById("messages");
-      var el = document.createElement("a");
-      el.innerHTML = '<img ng-src="img/women.jpg" src="img/women.jpg"><h2>' + from + '</h2><p>' + message + '</p>';
-      el.setAttribute('class', 'item item-avatar');
-      el.setAttribute('href', '#');
-      messages.appendChild(el);
+      var header = document.createElement("a");
+      header.innerHTML = '<img ng-src="img/women.jpg" src="img/women.jpg"><h2>' + from + '</h2><p>' + date + '</p>';
+      header.setAttribute('class', 'item item-avatar');
+      header.setAttribute('href', '#');
+      messages.appendChild(header);
+
+      var text = document.createElement("div");
+      text.innerHTML = '<p>' + message + '</p>';
+      text.setAttribute('class', 'item item-body');
+      messages.appendChild(text);
    },
    clearMessages: function() {
     // Remove all messages

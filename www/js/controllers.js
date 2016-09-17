@@ -1,29 +1,29 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $ionicLoading, $ionicSideMenuDelegate, $ionicModal, $timeout) {
+.controller('DashCtrl', function($rootScope, $scope, $ionicLoading, $ionicSideMenuDelegate, $ionicModal, $timeout) {
 
   $scope.date = new Date();
 
   $scope.credentials = function(){
   };
 
+  $scope.data = {
+    firstname : 'Hans',
+    lastname : 'Muster'
+  };
+
   $scope.closeLogin = function () {
     if($scope.credentials.password && $scope.credentials.username){
-
-      $scope.case.firstname = $scope.credentials.username.split('.')[0];
-      $scope.case.lastname = $scope.credentials.username.split('.')[1];
-
-      console.log($scope.case.firstname);
-      console.log($scope.case.lastname);
 
       $scope.showSucces();
       // store the credentials to the mobile device
       window.localStorage.setItem("customer_bpm_username", $scope.credentials.username);
       window.localStorage.setItem("customer_bpm_password", $scope.credentials.password);
-      $timeout(function() {
+
+      $timeout(function() {          
           $scope.login.hide();
       }, 1000);
-    }else{
+    } else{
       $scope.showFailed();
     }
   };

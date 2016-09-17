@@ -65,12 +65,14 @@ var app = {
       var header = document.createElement("a");
       header.innerHTML = '<img ng-src="img/women.jpg" src="img/women.jpg"><h2>' + from + '</h2><p>' + date + '</p>';
       header.setAttribute('class', 'item item-avatar');
+      header.setAttribute('style', 'background-color: #f5f5f5;');
       header.setAttribute('href', '#');
       messages.appendChild(header);
 
       var text = document.createElement("div");
-      text.innerHTML = '<p>' + message + '</p>';
-      text.setAttribute('class', 'item item-body');
+      text.innerHTML = message;
+      text.setAttribute('class', 'item item-text-wrap');
+      text.setAttribute('style', 'padding: 8px; text-align:justify;');
       messages.appendChild(text);
    },
    clearMessages: function() {

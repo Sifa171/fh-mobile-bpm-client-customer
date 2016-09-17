@@ -239,16 +239,6 @@
 .dashHeader img {
   width: 100%;
 }
-/*.dashHeader h2 {
-   position: absolute; 
-   top: -5px; 
-   left: 10px;
-}
-.dashHeader span {
-   position: absolute; 
-   top: 55px; 
-   left: 10px;
-}*/
 
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
     color: #444; 

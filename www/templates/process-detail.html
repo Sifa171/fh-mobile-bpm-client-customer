@@ -19,9 +19,7 @@
           <p>{{date | date:'dd.MM.yyyy'}}</p>
         </div>
 
-        <div class="item item-text-wrap">
-          {{request}}
-        </div>
+        <div class="item item-text-wrap" style="white-space:pre-wrap;">{{request}}</div>
       </div>
 
       <div class="card">
@@ -30,9 +28,7 @@
           <h2>Sabine Sachbearbeiter</h2>
           <p>{{date | date:'dd.MM.yyyy'}}</p>
         </div>
-        <div class="item item-text-wrap">
-          Status: {{decision}}<br/><br/>
-          {{comment}}
+        <div id="comment" class="item item-text-wrap" style="white-space:pre-wrap;">Status: <span style="color: green;">Request completed</span><br/><br/>{{comment}}
         </div>
       </div>
     </div>

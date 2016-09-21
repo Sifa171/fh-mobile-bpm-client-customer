@@ -1,11 +1,12 @@
 {
-  "appid": "cn4wjyv3vhpsu7omxvlet5po",
-  "appkey": "f3e6c8f90f278f4e3ba52156cf36e5624f4481d8",
-  "connectiontag": "0.0.35",
-  "host": "https://sa-jboss-dach.redhat.feedhenry.com",
-  "projectid": "cn4wjytjvbpp36i54bsr4ttf",
+  "appid": "o2vgiiz4omsbdo75r3jpcvvk",
+  "appkey": "6fac234f653c0165676e96e0945bfa206cd45bcf",
+  "apptitle": "Customer App",
+  "connectiontag": "0.0.9",
+  "host": "https://sfaulhab.us.demos.redhatmobile.com",
   "ios": {
-    "variantID": "218aadb2-25e0-411a-bcb1-71a9521e20d5",
-    "variantSecret": "97af76e4-04dd-490b-9c93-611241f34a29"
-  }
+    "variantID": "5a9443b1-7250-42f3-872f-4633b27b2ef5",
+    "variantSecret": "9453ca9c-c8ab-4ea0-8aab-36518fae9257"
+  },
+  "projectid": "o2vgiizgocujwttyykgu4ymw"
 }

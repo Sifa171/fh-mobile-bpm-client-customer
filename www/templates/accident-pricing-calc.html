@@ -1,0 +1,123 @@
+<ion-view view-title="Process">
+  <ion-header-bar class="bar-stable nav-background">
+    <h1 class="title myTitle">Ski Accident Insurance</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="modalAccidentPricingCancel()">Cancel</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list" ng-show="noticeMessage">
+      <span class="item noticeMessage" >
+        <p class="noticeMessage"><b>{{noticeMessage}}</b></p>
+      </span>
+    </div>
+    <h3><i class="icon ion-ios-calculator-outline"></i>&nbsp;Your personal quote</h4>
+    <form>
+      <div class="list list-inset">
+      <div class="item item-divider">
+        Base data
+      </div>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Age
+          </div>
+          <select>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+            <option>32</option>
+            <option>33</option>
+            <option>34</option>
+            <option>35</option>
+            <option selected>36</option>
+            <option>37</option>
+            <option>38</option>
+            <option>39</option>
+            <option>40</option>
+            <option>41</option>
+            <option>42</option>
+            <option>43</option>
+            <option>44</option>
+            <option>45</option>
+            <option>46</option>
+            <option>47</option>
+            <option>48</option>
+            <option>49</option>
+            <option>50</option>
+            <option>51</option>
+            <option>52</option>
+            <option>53</option>
+            <option>54</option>
+            <option>55</option>
+            <option>56</option>
+            <option>57</option>
+            <option>58</option>
+            <option>59</option>
+            <option>60</option>
+            <option>61</option>
+            <option>62</option>
+            <option>63</option>
+            <option>64</option>
+            <option>65</option>
+            <option>66</option>
+            <option>67</option>
+            <option>68</option>
+            <option>69</option>
+            <option>70</option>
+          </select>
+        </label>
+
+
+      <label class="item item-input item-select">
+        <div class="input-label">Amount covered (€)</div>
+        <select>
+          <option>20.000</option>
+          <option selected>50.000</option>
+          <option>100.000</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">Duration (days)</div>
+        <select>
+          <option>3</option>
+          <option selected>5</option>
+          <option>7</option>
+          <option>14</option>
+        </select>
+      </label>
+    
+    <div class="item item-divider">
+      Tariff
+    </div>
+        <ion-list>
+          <ion-radio ng-model="choice" ng-value="'Eco'">Eco</ion-radio>
+          <ion-radio ng-model="choice" ng-value="'Standard'" ng-selected="true">Standard</ion-radio>
+          <ion-radio ng-model="choice" ng-value="'Premium'">Premium</ion-radio>
+        </ion-list>
+
+
+
+
+
+        <button type="button" class="button button-block button-stable" ng-click="createCase()">
+          Calculate
+        </button>
+      </div>
+
+
+      
+    </form>
+  </ion-content>
+</ion-view>

@@ -21,7 +21,7 @@
           <div class="input-label">
             Age
           </div>
-          <select>
+          <select ng-model="accidentPricing.age" ng-click="recalculateAccidentPricing()">
             <option>18</option>
             <option>19</option>
             <option>20</option>
@@ -40,7 +40,7 @@
             <option>33</option>
             <option>34</option>
             <option>35</option>
-            <option selected>36</option>
+            <option>36</option>
             <option>37</option>
             <option>38</option>
             <option>39</option>
@@ -81,18 +81,18 @@
 
       <label class="item item-input item-select">
         <div class="input-label">Amount covered (€)</div>
-        <select>
+        <select ng-model="accidentPricing.amountCovered" ng-click="recalculateAccidentPricing()">
           <option>20.000</option>
-          <option selected>50.000</option>
+          <option>50.000</option>
           <option>100.000</option>
         </select>
       </label>
 
       <label class="item item-input item-select">
         <div class="input-label">Duration (days)</div>
-        <select>
+        <select ng-model="accidentPricing.duration" ng-click="recalculateAccidentPricing()">
           <option>3</option>
-          <option selected>5</option>
+          <option>5</option>
           <option>7</option>
           <option>14</option>
         </select>
@@ -101,23 +101,24 @@
     <div class="item item-divider">
       Tariff
     </div>
-        <ion-list>
-          <ion-radio ng-model="choice" ng-value="'Eco'"><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Eco</ion-radio>
-          <ion-radio ng-model="choice" ng-value="'Standard'" ng-selected="true"><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Standard</ion-radio>
-          <ion-radio ng-model="choice" ng-value="'Premium'"><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Premium</ion-radio>
+        <ion-list ng-click="recalculateAccidentPricing()">
+          <ion-radio ng-model="accidentPricing.tariff" ng-value="'Eco'"><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Eco</ion-radio>
+          <ion-radio ng-model="accidentPricing.tariff" ng-value="'Standard'" ng-selected="true"><i class="icon ion-ios-star-outline"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Standard</ion-radio>
+          <ion-radio ng-model="accidentPricing.tariff" ng-value="'Premium'"><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i><i class="icon ion-ios-star"></i>&nbsp;&nbsp;Premium</ion-radio>
         </ion-list>
 
 
+      <div class="item item-icon-left item-button-right" ng-show="accidentPricing.premium" style="margin-top: 8px;">
+          <i class="icon ion-asterisk"></i>&nbsp;<b>Your special offer:</b> {{accidentPricing.premium}} €
+          <button class="button button-assertive">
+            Buy
+          </button>
+        </div>
 
-
-
-        <button type="button" class="button button-block button-stable" ng-click="createCase()">
+        <button type="button" class="button button-block button-stable" ng-click="calculateAccidentPricing()">
           Calculate
         </button>
-      </div>
-
-
-      
+      </div>      
     </form>
   </ion-content>
 </ion-view>

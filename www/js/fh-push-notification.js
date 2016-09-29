@@ -43,7 +43,7 @@ var app = {
       }
    },
    onNotification: function (event) {
-      app.addMessage('Sabine Sachbearbeiter', event.alert || event.version);
+      app.addMessage('Ken Clark', event.alert || event.version);
    },
    addMessage: function (from, message) {
      document.getElementById('nomessages').style.display = 'none';

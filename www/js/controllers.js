@@ -8,8 +8,8 @@ angular.module('starter.controllers', [])
   };
 
   $scope.data = {
-    firstname : 'Hans',
-    lastname : 'Muster'
+    firstname : 'Carl',
+    lastname : 'Customer'
   };
 
   $scope.closeLogin = function () {
